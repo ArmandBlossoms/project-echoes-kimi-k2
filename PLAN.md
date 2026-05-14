@@ -4,6 +4,8 @@
 > Plan owner: Krit, VFCC
 > Plan date: 2026-05-14 (revision 2 — post-council)
 > Build location: `/Users/krit/Desktop/04 Web & Development/Project-Echoes/`
+> **K2.6 repo:** `github.com/ArmandBlossoms/project-echoes-kimi-k2`
+> **Inherited from:** Claude Opus 4.7 + Codex adversarial planning session
 
 ---
 

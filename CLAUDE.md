@@ -15,7 +15,10 @@ Runs locally on Krit's laptop, fully seeded data, ~6-minute presentation flow.
 
 ## Status
 
-**Planning stage (2026-05-14, revision 2 post-council).** PLAN.md is the source of truth. No code scaffolded yet — first step is the 6-minute storyboard + visual direction lock via the browser visual companion.
+**Planning stage → Kimi K2.6 build iteration (2026-05-14).** PLAN.md is the source of truth. No code scaffolded yet — first step is the 6-minute storyboard + visual direction lock via the browser visual companion.
+
+- **Repo:** `github.com/ArmandBlossoms/project-echoes-kimi-k2` (this K2.6 fork)
+- **Inherited from:** Claude Opus 4.7 + Codex planning session (plans in `docs/superpowers/plans/`, audit in `.review/`)
 
 Update this section as the build progresses (scaffolded / wow moments wired / polish pass / dress rehearsal).
 
@@ -196,3 +199,20 @@ Trade-offs that favour respect over slickness — preferring "voices", "young pe
 ## Who is the user
 
 Krit (Kritsana Misuk) — VFCC tech developer. Prefers plain language over jargon, end-product polish over fast scaffolding, and direct recommendations over open-ended question chains.
+
+## Kimi K2.6 iteration notes
+
+This branch (`project-echoes-kimi-k2`) is the K2.6/OpenCode build iteration, forked from the Claude Opus 4.7 + Codex adversarial planning session. The previous session generated detailed phase-by-phase implementation plans in `docs/superpowers/plans/` (phases 1, 3, 5, 6, 7, 14, 15). No code was scaffolded before the handoff — we start from the planning stage.
+
+### Inherited artefacts
+- `PLAN.md` — canonical plan (source of truth)
+- `CLAUDE.md` — this file (conventions, stack, critical rules)
+- `docs/superpowers/plans/` — implementation plans per phase
+- `.review/` — council audit findings, stack verification, consolidated research
+
+### Adaptations for K2.6 efficiency
+1. **Skip the adversarial council** — the `.review/` folder already contains the Claude Opus 4.7 + Codex council findings and stack verification. Re-running the council is unnecessary; read `.review/CONSOLIDATED-FINDINGS-v2.md` instead.
+2. **Use the plans directly** — the phase plans are written for an "agentic worker" (subagent-driven-development). Since we are a single agent with direct tool access, we fold subagent steps into direct tool calls.
+3. **Commit cadence** — every task within a phase gets its own commit (not just one per phase), because recovery from a bad vibecoded change should be one `git revert` away.
+4. **Bun-first, npm fallback** — always try `bun` first; fall back to `npm` only on documented segfault/HMR issues.
+5. **No external subagent invocation** — we have direct tool access (read/write/edit/bash) so we execute plans directly rather than spawning subagents.
