@@ -216,3 +216,19 @@ This branch (`project-echoes-kimi-k2`) is the K2.6/OpenCode build iteration, for
 3. **Commit cadence** — every task within a phase gets its own commit (not just one per phase), because recovery from a bad vibecoded change should be one `git revert` away.
 4. **Bun-first, npm fallback** — always try `bun` first; fall back to `npm` only on documented segfault/HMR issues.
 5. **No external subagent invocation** — we have direct tool access (read/write/edit/bash) so we execute plans directly rather than spawning subagents.
+
+---
+
+## Agent skills
+
+### Issue tracker
+
+Issues for this repo live as GitHub issues on `ArmandBlossoms/project-echoes-kimi-k2`. Uses `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical triage roles (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`) + per-phase labels (`phase-3` through `phase-15`, `blocked`, `docs`, `wow-moment`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context repo. `PLAN.md` + `CLAUDE.md` serve as the domain context. Council audit in `.review/CONSOLIDATED-FINDINGS-v2.md`. Phase plans in `docs/superpowers/plans/`. See `docs/agents/domain.md`.
