@@ -15,7 +15,7 @@ Runs locally on Krit's laptop, fully seeded data, ~6-minute presentation flow.
 
 ## Status
 
-**Planning stage → Kimi K2.6 build iteration (2026-05-14).** PLAN.md is the source of truth. No code scaffolded yet — first step is the 6-minute storyboard + visual direction lock via the browser visual companion.
+**Scaffolded (Phase 3 complete, 2026-05-14).** Next.js 15 + Bun + Tailwind 4 + shadcn + VFCC tokens + brand chrome (EchoesHeader + DemoDataBadge) shipped to `phase-3-scaffold`. Next: phase 4 seed data + integrity, or continue with any parallel phase.
 
 - **Repo:** `github.com/ArmandBlossoms/project-echoes-kimi-k2` (this K2.6 fork)
 - **Inherited from:** Claude Opus 4.7 + Codex planning session (plans in `docs/superpowers/plans/`, audit in `.review/`)
