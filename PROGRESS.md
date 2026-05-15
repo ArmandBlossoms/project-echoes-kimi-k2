@@ -12,7 +12,7 @@
 |-------|------|--------|--------------|
 | 1 | 6-minute storyboard | ⏳ Not started | — |
 | 2 | Visual direction lock | ⏳ Not started | — |
-| 3 | Scaffolding (Next.js + Tailwind 4 + shadcn + VFCC tokens) | ⏳ Not started | — |
+| 3 | Scaffolding (Next.js + Tailwind 4 + shadcn + VFCC tokens) | ✅ Complete | `phase-3-scaffold` |
 | 4 | Seed data authoring + safety + integrity | ⏳ Not started | — |
 | 5 | Offline tile generation + basemaps-assets self-hosting | ⏳ Not started | — |
 | 6 | Core components | ⏳ Not started | — |
