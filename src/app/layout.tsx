@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, JetBrains_Mono, Shrikhand } from "next/font/google";
 import "./globals.css";
+import { EchoesHeader } from "@/components/echoes-header";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin", "latin-ext"],
@@ -36,7 +37,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       data-theme="dark"
       className={`${instrumentSans.variable} ${shrikhand.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-[family-name:var(--font-ui)] antialiased">{children}</body>
+      <body className="font-[family-name:var(--font-ui)] antialiased">
+        <EchoesHeader />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
