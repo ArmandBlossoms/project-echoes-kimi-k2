@@ -1,0 +1,320 @@
+/* =========================================================
+   VFCC Design System — Colors & Type
+   Voices From Care Cymru · Modernised for 2025–2026
+   =========================================================
+   Heritage: pillar-box red, two greens, charcoal, soft grey.
+   Refresh:  richer tones, warmer neutrals, a sunny accent,
+             and a proper dark mode. Reds & greens stay the
+             identity — everything else is tuned around them.
+   ========================================================= */
+
+/* ---------- Webfonts (Google Fonts) ----------
+   Display : Shrikhand      — stand-in for the original 'One Direction / Housepaint'
+                               chunky, leaning, hand-drawn caps. Used on posters,
+                               quote cards, covers.
+   UI      : Instrument Sans — warm humanist sans for headings + body.
+                               Replaces Questrial / Avenir Next.
+   Numeric : Instrument Sans (tabular)
+------------------------------------------------- */
+
+:root {
+  /* =========================================================
+     1. CORE PALETTE — the 'signature' colours
+     ========================================================= */
+
+  /* Reds — our voice colour. Warmer + deeper than the 2017 pillar-box. */
+  --vfcc-red-50:  #fff1ef;
+  --vfcc-red-100: #ffdcd6;
+  --vfcc-red-200: #ffb5a9;
+  --vfcc-red-300: #ff8574;
+  --vfcc-red-400: #f85c47;
+  --vfcc-red-500: #e53e2f;  /* legacy pillar-box (#e53e2f) — kept for brand continuity */
+  --vfcc-red-600: #c72d20;
+  --vfcc-red-700: #9d2018;
+  --vfcc-red-800: #6e1710;
+  --vfcc-red-900: #3f0c08;
+
+  /* Greens — our 'go' / growth colour. Brighter and slightly more yellow-leaning. */
+  --vfcc-green-50:  #eafbee;
+  --vfcc-green-100: #c6f3cf;
+  --vfcc-green-200: #8ee49e;
+  --vfcc-green-300: #4ecf68;
+  --vfcc-green-400: #22b844;
+  --vfcc-green-500: #00953a;  /* legacy dark green */
+  --vfcc-green-600: #00782f;
+  --vfcc-green-700: #005b23;
+  --vfcc-green-800: #003d17;
+  --vfcc-green-900: #00200c;
+
+  /* Green (light/leaf) — kept from legacy #47a141, used for secondary states */
+  --vfcc-leaf: #47a141;
+
+  /* =========================================================
+     2. NEW ACCENTS — added in the modernisation
+     ========================================================= */
+
+  /* Sun — a warm honey yellow. Youth, optimism, callouts. */
+  --vfcc-sun-100: #fff1c2;
+  --vfcc-sun-300: #ffd76a;
+  --vfcc-sun-500: #f7b733;
+  --vfcc-sun-700: #b47a15;
+
+  /* Sky — dusty Welsh-coast blue. Links, info, tags. */
+  --vfcc-sky-100: #dbeaf4;
+  --vfcc-sky-300: #8cbadb;
+  --vfcc-sky-500: #3a84bc;
+  --vfcc-sky-700: #1f5681;
+
+  /* Plum — quiet contrast for charts, badges. */
+  --vfcc-plum-100: #f3e7f1;
+  --vfcc-plum-500: #7a3a6f;
+  --vfcc-plum-700: #4c1f44;
+
+  /* =========================================================
+     3. NEUTRALS — warm off-whites, proper inky dark
+     ========================================================= */
+  --vfcc-ink:       #17120f;  /* main text / dark bg */
+  --vfcc-ink-soft:  #2a241f;
+  --vfcc-slate-700: #3d3732;
+  --vfcc-slate-500: #6a625c;  /* replaces legacy mid-grey #717271 */
+  --vfcc-slate-400: #8f857d;
+  --vfcc-slate-300: #b8ada3;
+  --vfcc-slate-200: #d8cec5;
+  --vfcc-slate-100: #ece6df;
+  --vfcc-cream:     #f7f2ea;  /* warm page bg — replaces cool light grey #e7e1e6 */
+  --vfcc-paper:     #fbf8f3;
+  --vfcc-white:     #ffffff;
+
+  /* =========================================================
+     4. SEMANTIC TOKENS — light theme (default)
+     ========================================================= */
+  --bg:            var(--vfcc-cream);
+  --bg-raised:     var(--vfcc-paper);
+  --bg-inverse:    var(--vfcc-ink);
+  --surface:       var(--vfcc-white);
+  --surface-muted: var(--vfcc-slate-100);
+
+  --fg:        var(--vfcc-ink);
+  --fg-1:      var(--vfcc-ink);          /* primary text */
+  --fg-2:      var(--vfcc-slate-700);    /* secondary */
+  --fg-3:      var(--vfcc-slate-500);    /* muted / meta */
+  --fg-on-dark:  var(--vfcc-paper);
+  --fg-on-brand: var(--vfcc-white);
+
+  --border:       var(--vfcc-slate-200);
+  --border-strong:var(--vfcc-slate-400);
+  --border-ink:   var(--vfcc-ink);       /* hard 2px outline — a brand motif */
+
+  /* Brand roles */
+  --brand:         var(--vfcc-red-500);
+  --brand-hover:   var(--vfcc-red-600);
+  --brand-pressed: var(--vfcc-red-700);
+  --brand-soft:    var(--vfcc-red-100);
+
+  --accent:        var(--vfcc-green-500);
+  --accent-hover:  var(--vfcc-green-600);
+  --accent-soft:   var(--vfcc-green-100);
+
+  --highlight:     var(--vfcc-sun-300);  /* marker / underline */
+  --link:          var(--vfcc-sky-700);
+  --link-hover:    var(--vfcc-red-600);
+
+  /* State */
+  --success: var(--vfcc-green-500);
+  --warning: var(--vfcc-sun-500);
+  --danger:  var(--vfcc-red-500);
+  --info:    var(--vfcc-sky-500);
+
+  --focus-ring: var(--vfcc-sun-500);
+
+  /* =========================================================
+     5. RADII — soft but not cartoony. Pills allowed on CTAs.
+     ========================================================= */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* =========================================================
+     6. SHADOWS — soft inky shadows + a signature 'offset' shadow
+        The offset shadow pairs with a hard ink border — it's how
+        cards read 'hand-crafted' rather than 'dashboard'.
+     ========================================================= */
+  --shadow-sm: 0 1px 2px rgba(23,18,15,.06), 0 1px 1px rgba(23,18,15,.04);
+  --shadow-md: 0 6px 18px -6px rgba(23,18,15,.15), 0 2px 4px rgba(23,18,15,.06);
+  --shadow-lg: 0 20px 40px -12px rgba(23,18,15,.22), 0 4px 10px rgba(23,18,15,.08);
+  /* Signature: 4px solid offset (ink) — cards, buttons, illustration plates */
+  --shadow-offset:    4px 4px 0 0 var(--vfcc-ink);
+  --shadow-offset-sm: 2px 2px 0 0 var(--vfcc-ink);
+  --shadow-offset-lg: 6px 6px 0 0 var(--vfcc-ink);
+  --shadow-offset-red:  4px 4px 0 0 var(--vfcc-red-500);
+  --shadow-offset-green:4px 4px 0 0 var(--vfcc-green-500);
+
+  /* =========================================================
+     7. SPACING — 4px base scale
+     ========================================================= */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10:128px;
+
+  /* =========================================================
+     8. TYPOGRAPHY — fonts, weights, scale
+     ========================================================= */
+  --font-display: 'Shrikhand', 'Fredoka', 'Rubik', system-ui, sans-serif;
+  --font-ui:      'Instrument Sans', 'Questrial', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+  --fw-bold:    700;
+
+  /* Modular scale — 1.200 minor third, a friendly editorial rhythm */
+  --fs-eyebrow: 0.8125rem; /* 13px */
+  --fs-body-sm: 0.875rem;  /* 14px */
+  --fs-body:    1rem;      /* 16px */
+  --fs-body-lg: 1.125rem;  /* 18px — preferred min for body */
+  --fs-h6:      1.125rem;
+  --fs-h5:      1.3125rem;
+  --fs-h4:      1.625rem;
+  --fs-h3:      2rem;
+  --fs-h2:      2.625rem;
+  --fs-h1:      3.5rem;
+  --fs-display: 4.75rem;
+  --fs-mega:    6.5rem;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-normal:1.5;
+  --lh-loose: 1.7;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.04em;
+  --tracking-caps:     0.08em;
+
+  /* =========================================================
+     9. MOTION
+     ========================================================= */
+  --ease-out:   cubic-bezier(.2,.7,.2,1);
+  --ease-in-out:cubic-bezier(.6,.1,.2,1);
+  --ease-spring:cubic-bezier(.3,1.6,.5,1);
+  --dur-quick:  120ms;
+  --dur-base:   200ms;
+  --dur-slow:   360ms;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+[data-theme="dark"] {
+  --bg:            #100b08;
+  --bg-raised:     #17120f;
+  --surface:       #201a15;
+  --surface-muted: #2a241f;
+
+  --fg-1: #f7f2ea;
+  --fg-2: #d8cec5;
+  --fg-3: #8f857d;
+  --fg-on-brand: var(--vfcc-white);
+
+  --border:        #2f2823;
+  --border-strong: #4a413a;
+  --border-ink:    #f7f2ea;
+
+  --brand:        var(--vfcc-red-400);
+  --brand-hover:  var(--vfcc-red-300);
+  --brand-soft:   #3f0c08;
+  --accent:       var(--vfcc-green-400);
+  --accent-soft:  #003d17;
+  --link:         var(--vfcc-sky-300);
+
+  --shadow-offset:    4px 4px 0 0 var(--vfcc-paper);
+  --shadow-offset-sm: 2px 2px 0 0 var(--vfcc-paper);
+  --shadow-offset-lg: 6px 6px 0 0 var(--vfcc-paper);
+}
+
+/* =========================================================
+   ELEMENT DEFAULTS — opinionated base styles
+   ========================================================= */
+html, body {
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-normal);
+  font-feature-settings: 'ss01', 'kern', 'liga';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--vfcc-sun-300); color: var(--vfcc-ink); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
+h5 { font-size: var(--fs-h5); font-weight: var(--fw-semibold); }
+h6 { font-size: var(--fs-h6); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: var(--tracking-caps); }
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  font-size: var(--fs-display);
+}
+.mega {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+  font-size: var(--fs-mega);
+}
+
+p { margin: 0 0 var(--space-4); text-wrap: pretty; max-width: 65ch; }
+.lead { font-size: var(--fs-h5); color: var(--fg-2); line-height: var(--lh-snug); }
+small, .small { font-size: var(--fs-body-sm); color: var(--fg-3); }
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--vfcc-red-500);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-quick) var(--ease-out);
+}
+a:hover { color: var(--link-hover); }
+
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.925em; }
+
+hr {
+  border: 0;
+  border-top: 2px solid var(--border-ink);
+  margin: var(--space-6) 0;
+}
