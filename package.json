@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -17,6 +20,7 @@
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
