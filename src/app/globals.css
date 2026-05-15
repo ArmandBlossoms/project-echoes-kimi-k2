@@ -1,26 +1,41 @@
 @import "tailwindcss";
+@import "../styles/vfcc-tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * shadcn/ui CSS-variable mapping.
+ * shadcn's tokens on the left, VFCC semantic tokens on the right.
+ * Project defaults to dark; both :root and [data-theme=dark] resolve to the same map.
+ */
+:root,
+[data-theme="dark"] {
+  --background: var(--bg);
+  --foreground: var(--fg-1);
+  --card: var(--surface);
+  --card-foreground: var(--fg-1);
+  --popover: var(--surface);
+  --popover-foreground: var(--fg-1);
+  --primary: var(--brand);
+  --primary-foreground: var(--fg-on-brand);
+  --secondary: var(--surface-muted);
+  --secondary-foreground: var(--fg-1);
+  --muted: var(--surface-muted);
+  --muted-foreground: var(--fg-3);
+  --accent: var(--brand-soft);
+  --accent-foreground: var(--fg-1);
+  --destructive: var(--brand);
+  --destructive-foreground: var(--fg-on-brand);
+  --border: var(--border-ink);
+  --input: var(--border-ink);
+  --ring: var(--brand);
+  --radius: var(--radius-md, 0.75rem);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--bg);
+  color: var(--fg-1);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ui), system-ui, sans-serif;
 }
